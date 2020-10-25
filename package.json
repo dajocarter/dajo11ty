@@ -1,0 +1,33 @@
+{
+  "name": "dajo11ty",
+  "version": "1.0.0",
+  "description": "i built this with 11ty",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy",
+    "debug": "DEBUG=Eleventy* eleventy",
+    "dry-run": "DEBUG=Eleventy* eleventy --dryrun",
+    "serve": "eleventy --serve",
+    "serve-quiet": "eleventy --serve --quiet",
+    "watch": "eleventy --watch",
+    "watch-quiet": "eleventy --watch --quiet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dajocarter/dajo11ty.git"
+  },
+  "keywords": [
+    "11ty",
+    "eleventy"
+  ],
+  "author": "dajocarter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dajocarter/dajo11ty/issues"
+  },
+  "homepage": "https://github.com/dajocarter/dajo11ty#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
+}
