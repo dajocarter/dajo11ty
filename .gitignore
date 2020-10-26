@@ -1,2 +1,5 @@
 node_modules
+# generated website directory
 dist
+# generated css file
+src/styles/index.css

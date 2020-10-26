@@ -5,14 +5,15 @@
   "main": ".eleventy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "eleventy",
+    "build": "NODE_ENV=production npm run postcss && eleventy",
     "clean": "rm -r dist",
-    "debug": "DEBUG=Eleventy* eleventy",
-    "dry-run": "DEBUG=Eleventy* eleventy --dryrun",
-    "serve": "npm run clean && eleventy --serve",
-    "serve-quiet": "npm run clean && eleventy --serve --quiet",
-    "watch": "npm run clean && eleventy --watch",
-    "watch-quiet": "npm run clean && eleventy --watch --quiet"
+    "debug": "NODE_ENV=production npm run postcss && DEBUG=Eleventy* eleventy",
+    "dry-run": "NODE_ENV=production npm run postcss && DEBUG=Eleventy* eleventy --dryrun",
+    "postcss": "postcss src/styles/tailwind.css > src/styles/index.css",
+    "serve": "npm run clean && npm run postcss && eleventy --serve",
+    "serve-quiet": "npm run clean && npm run postcss && eleventy --serve --quiet",
+    "watch": "npm run clean && npm run postcss && eleventy --watch",
+    "watch-quiet": "npm run clean && npm run postcss && eleventy --watch --quiet"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,11 @@
   },
   "homepage": "https://github.com/dajocarter/dajo11ty#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1"
+    "@11ty/eleventy": "^0.11.1",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8.1.4",
+    "postcss-cli": "^8.1.0",
+    "postcss-import": "^13.0.0",
+    "tailwindcss": "^1.9.6"
   }
 }
