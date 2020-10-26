@@ -104,7 +104,7 @@ Now I'm ready to add this blog post to the site with `mkdir src/blog && touch sr
 }
 ```
 
-The other way to do this is via the 11ty config so in my `.eleventy.js` I will add
+The other way to do this is via the 11ty config by adding the following. However, it doesn't compensate for having to declare the layout in each post. Therefore I use the `json` tactic above, although I'm not sure how long it'll work since I've yet to see it documented (it could be an old feature).
 
 ```js
 // add blog posts as a collection
