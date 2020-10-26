@@ -123,7 +123,7 @@ eleventyConfig.addCollection(
 )
 ```
 
-The final thing to do is update my index file to list all of my blog posts.
+The final thing to do is update my index file to list all of my blog posts. Around the unordered list you can check for `collections.blog` and loop through that to generate list items for each post.
 
 ```html
 {% if collections.blog %}
