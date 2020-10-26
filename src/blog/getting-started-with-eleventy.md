@@ -137,4 +137,4 @@ The final thing to do is update my index file to list all of my blog posts. Arou
 {% endif %}
 ```
 
-With that I now have a very basic blog site! The next thing I'm going to look to do is add TailwindCSS as my styling framework.
+With that, I now have a very basic blog site that you can view at [https://dajo11ty.netlify.com](https://dajo11ty.netlify.com)! The [next post](/blog/using-tailwindcss-with-eleventy) will focus on adding TailwindCSS as my styling framework.
