@@ -6,12 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "eleventy",
+    "clean": "rm -r dist",
     "debug": "DEBUG=Eleventy* eleventy",
     "dry-run": "DEBUG=Eleventy* eleventy --dryrun",
-    "serve": "eleventy --serve",
-    "serve-quiet": "eleventy --serve --quiet",
-    "watch": "eleventy --watch",
-    "watch-quiet": "eleventy --watch --quiet"
+    "serve": "npm run clean && eleventy --serve",
+    "serve-quiet": "npm run clean && eleventy --serve --quiet",
+    "watch": "npm run clean && eleventy --watch",
+    "watch-quiet": "npm run clean && eleventy --watch --quiet"
   },
   "repository": {
     "type": "git",
