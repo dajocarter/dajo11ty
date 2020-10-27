@@ -31,6 +31,7 @@
   "homepage": "https://github.com/dajocarter/dajo11ty#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
+    "@tailwindcss/typography": "^0.2.0",
     "autoprefixer": "^10.0.1",
     "postcss": "^8.1.4",
     "postcss-cli": "^8.1.0",
