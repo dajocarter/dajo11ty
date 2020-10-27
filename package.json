@@ -33,6 +33,7 @@
     "@11ty/eleventy": "^0.11.1",
     "@tailwindcss/typography": "^0.2.0",
     "autoprefixer": "^10.0.1",
+    "luxon": "^1.25.0",
     "postcss": "^8.1.4",
     "postcss-cli": "^8.1.0",
     "postcss-import": "^13.0.0",

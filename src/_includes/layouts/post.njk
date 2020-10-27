@@ -3,5 +3,6 @@ layout: default
 ---
 <article class="prose-sm sm:prose md:prose-lg lg:prose-xl xl:prose-2xl">
   <h1>{{ title }}</h1>
+  <p>Posted on <time datetime="{{ page.date | htmlDateString }}">{{ page.date | humanDateString }}</time>
   {{ content | safe }}
 </article>
