@@ -5,9 +5,13 @@
     <title>{{ title }}</title>
     <meta name="description" content="{{ description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script defer src="/scripts/index.js"></script>
     <link rel="stylesheet" href="/styles/index.css">
   </head>
-    {{ content | safe }}
-  <body class="bg-theme text-theme">
+  <body data-theme="dark" class="bg-theme text-theme">
+    {% include "header.njk" %}
+    <main>
+      {{ content | safe }}
+    </main>
   </body>
 </html>

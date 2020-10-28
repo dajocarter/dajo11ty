@@ -8,6 +8,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('htmlDateString', date => DateTime.fromJSDate(date, { zone: 'utc' }).toFormat('yyyy-LL-dd'))
   // pass through static assets
   eleventyConfig.addPassthroughCopy('src/styles/index.css')
+  eleventyConfig.addPassthroughCopy('src/img')
+  eleventyConfig.addPassthroughCopy('src/scripts/index.js')
   // return directory config
   return {
     dir: {
