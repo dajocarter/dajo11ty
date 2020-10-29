@@ -4,20 +4,19 @@
   --powder-blue: #a8dadc;
   --celadon-blue: #457b9d;
   --prussian-blue: #1d3557;
+
+  --theme--color__link: var(--imperial-red);
   /* set dark theme as default */
   --theme--color__background: var(--prussian-blue);
   --theme--color__text: var(--honeydew);
-  --theme--color__link: var(--imperial-red);
 }
 
 body[data-theme='dark'] {
   --theme--color__background: var(--prussian-blue);
   --theme--color__text: var(--honeydew);
-  --theme--color__link: var(--imperial-red);
 }
 
 body[data-theme='light'] {
   --theme--color__background: var(--honeydew);
   --theme--color__text: var(--prussian-blue);
-  --theme--color__link: var(--imperial-red);
 }
