@@ -7,7 +7,7 @@ description: 'I built this with 11ty'
   <h1>My Blog Posts</h1>
   {% if collections.blog %}
   <ul>
-    {% for post in collections.blog %}
+    {% for post in collections.blog | reverse %}
     <li>
       <a href="{{ post.url }}"> {{ post.data.title }} </a>
     </li>
