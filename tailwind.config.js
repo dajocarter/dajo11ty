@@ -24,6 +24,7 @@ module.exports = {
         link: 'var(--theme--color__link)'
       },
       borderColor: {
+        default: 'var(--theme--color__border)',
         theme: 'var(--theme--color__border)',
         link: 'var(--theme--color__link)'
       }
