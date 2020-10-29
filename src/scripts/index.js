@@ -13,6 +13,7 @@ function setTheme (currentTheme, nextTheme) {
   themeApplyElt.dataset.theme = currentTheme
   themeToggleElt.src = themeToggleElt.src.replace(currentTheme, nextTheme)
   themeToggleElt.alt = themeToggleElt.alt.replace(currentTheme, nextTheme)
+  themeToggleElt.nextElementSibling.innerText = themeToggleElt.nextElementSibling.innerText.replace(currentTheme, nextTheme)
   themeToggleElt.dataset.themeSwitcher = nextTheme
 }
 
