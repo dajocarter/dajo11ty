@@ -9,14 +9,17 @@
   /* set dark theme as default */
   --theme--color__background: var(--prussian-blue);
   --theme--color__text: var(--honeydew);
+  --theme--color__border: var(--powder-blue);
 }
 
 body[data-theme='dark'] {
   --theme--color__background: var(--prussian-blue);
   --theme--color__text: var(--honeydew);
+  --theme--color__border: var(--powder-blue);
 }
 
 body[data-theme='light'] {
   --theme--color__background: var(--honeydew);
   --theme--color__text: var(--prussian-blue);
+  --theme--color__border: var(--celadon-blue);
 }

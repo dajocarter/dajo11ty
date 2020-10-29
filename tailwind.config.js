@@ -12,7 +12,8 @@ module.exports = {
       colors: {
         theme: 'var(--theme--color__text)',
         link: 'var(--theme--color__link)',
-        background: 'var(--theme--color__background)'
+        background: 'var(--theme--color__background)',
+        border: 'var(--theme--color__border)'
       },
       textColor: {
         theme: 'var(--theme--color__text)',
@@ -20,6 +21,10 @@ module.exports = {
       },
       backgroundColor: {
         theme: 'var(--theme--color__background)',
+        link: 'var(--theme--color__link)'
+      },
+      borderColor: {
+        theme: 'var(--theme--color__border)',
         link: 'var(--theme--color__link)'
       }
     },
@@ -37,7 +42,7 @@ module.exports = {
             color: 'var(--theme--color__link)'
           },
           hr: {
-            borderColor: 'var(--theme--color__link)'
+            borderColor: 'var(--theme--color__border)'
           },
           h1: {
             color: 'var(--theme--color__text)'
@@ -58,13 +63,13 @@ module.exports = {
             color: 'var(--theme--color__text)'
           },
           'ol li:before': {
-            color: 'var(--theme--color__link)'
+            color: 'var(--theme--color__border)'
           },
           'ul li:before': {
-            backgroundColor: 'var(--theme--color__link)'
+            backgroundColor: 'var(--theme--color__border)'
           },
           blockquote: {
-            borderLeftColor: 'var(--theme--color__link)',
+            borderLeftColor: 'var(--theme--color__border)',
             color: 'var(--theme--color__text)'
           },
           pre: {
