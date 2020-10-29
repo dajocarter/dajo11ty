@@ -92,3 +92,5 @@ module.exports = function(eleventyConfig) {
 ```
 
 Instead of adding my generated CSS file to the site after it's been generated, I want the generated CSS file to be a part of the site build process. Thus above I only pass through the generated CSS file and make sure to run the `postcss` script before I use 11ty. Since this `index.css` file is only generated for builds, I'm going to add it to my `.gitignore`. I also need to add a `<link href="/styles/index.css">` to my default layout so that the site loads the generated CSS.
+
+Now I have a basic blog site with a styling framework ready for me to utilize. In my [next post](/blog/toggling-themes-with-tailwindcss), I'll cover how to toggle themes using TailwindCSS, CSS variables, and a little JavaScript.
