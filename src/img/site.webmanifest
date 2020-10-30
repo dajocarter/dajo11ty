@@ -1,0 +1,19 @@
+{
+    "name": "dajocarter",
+    "short_name": "dajocarter",
+    "icons": [
+        {
+            "src": "/img/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#e63946",
+    "background_color": "#e63946",
+    "display": "standalone"
+}
