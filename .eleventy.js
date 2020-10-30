@@ -1,4 +1,6 @@
+require('dotenv').config()
 const { DateTime } = require('luxon')
+
 module.exports = function(eleventyConfig) {
   // alias for layouts in frontmatter
   eleventyConfig.addLayoutAlias('default', 'layouts/default.njk')
