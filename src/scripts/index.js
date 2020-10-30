@@ -13,12 +13,9 @@ const themeApplyElt = document && document.body
 
 function setTheme (currentTheme, nextTheme) {
   themeApplyElt.dataset.theme = currentTheme
-  themeToggleElt.src = themeToggleElt.src.replace(currentTheme, nextTheme)
-  themeToggleElt.alt = themeToggleElt.alt.replace(currentTheme, nextTheme)
-  themeToggleElt.nextElementSibling.innerText = themeToggleElt.nextElementSibling.innerText.replace(
-    currentTheme,
-    nextTheme
-  )
+  themeToggleElt.firstElementChild.src = themeToggleElt.firstElementChild.src.replace(currentTheme, nextTheme)
+  themeToggleElt.firstElementChild.alt = themeToggleElt.firstElementChild.alt.replace(currentTheme, nextTheme)
+  themeToggleElt.setAttribute('aria-label', themeToggleElt.getAttribute('aria-label').replace(currentTheme, nextTheme))
   themeToggleElt.dataset.themeSwitcher = nextTheme
 }
 
@@ -40,7 +37,7 @@ if (theme) {
 themeToggleElt &&
   themeToggleElt.addEventListener('click', (event) => {
     const oldTheme = themeApplyElt.dataset.theme
-    const newTheme = event.target.dataset.themeSwitcher
+    const newTheme = themeToggleElt.dataset.themeSwitcher
     window.localStorage.setItem(STORAGE_ITEM, newTheme)
     setTheme(newTheme, oldTheme)
   })
