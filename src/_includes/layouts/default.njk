@@ -2,11 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>{{ title }}</title>
-    <meta name="description" content="{{ description }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% if env.isProd %}
+      {% include "googleAnalytics.njk" %}
+    {% endif %}
     <script defer src="/scripts/index.js"></script>
     <link rel="stylesheet" href="/styles/index.css">
+    <title>{{ title if title }}{{ " | " if title}}{{ env.site.title }}</title>
+    <meta name="description" content="{{ description or env.site.description }}" />
+    <meta property="og:site_name" content="{{ env.site.title }}" />
+    <meta property="og:title" content="{{ title if title }}{{ " | " if title}}{{ env.site.title }}" />
+    <meta property="og:url" content="{{ env.baseURL }}{{ page.url }}" />
+    <meta property="og:description" content="{{ description or env.site.description }}" />
+    <meta property="twitter:creator" content="@dajocarter" />
+    <meta property="twitter:title" content="{{ title if title }}{{ " | " if title}}{{ env.site.title }}" />
+    <meta property="twitter:description" content="{{ description or env.site.description }}" />
   </head>
   <body data-theme="dark" class="bg-theme text-theme border-theme">
     {% include "header.njk" %}
