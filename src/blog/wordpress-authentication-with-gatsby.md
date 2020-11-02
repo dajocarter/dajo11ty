@@ -18,7 +18,7 @@ To get started, you'll need to install the [Basic Auth](https://github.com/WP-AP
 
 Open your `gatsby-config.js` file and locate the portion for configuring `gatsby-source-wordpress` and add the following:
 
-```json{9-13}
+```json/8-12
 {
   "resolve": "gatsby-source-wordpress",
   "options": {

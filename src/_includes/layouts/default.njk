@@ -8,6 +8,9 @@
     {% endif %}
     <script defer src="/scripts/index.js"></script>
     <link rel="stylesheet" href="/styles/index.css">
+    {% if page.url.includes('/blog/') %}
+      <link rel="stylesheet" href="/styles/prism-coy-without-shadows.css">
+    {% endif %}
     <title>{{ title if title }}{{ " | " if title}}{{ env.site.title }}</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
@@ -18,14 +21,14 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="msapplication-config" content="/img/browserconfig.xml">
     <meta name="theme-color" content="#e63946">
-    <meta name="description" content="{{ description or env.site.description }}" />
-    <meta property="og:site_name" content="{{ env.site.title }}" />
-    <meta property="og:title" content="{{ title if title }}{{ " | " if title}}{{ env.site.title }}" />
-    <meta property="og:url" content="{{ env.baseURL }}{{ page.url }}" />
-    <meta property="og:description" content="{{ description or env.site.description }}" />
-    <meta property="twitter:creator" content="@dajocarter" />
-    <meta property="twitter:title" content="{{ title if title }}{{ " | " if title}}{{ env.site.title }}" />
-    <meta property="twitter:description" content="{{ description or env.site.description }}" />
+    <meta name="description" content="{{ description or env.site.description }}">
+    <meta property="og:site_name" content="{{ env.site.title }}">
+    <meta property="og:title" content="{{ title if title }}{{ " | " if title}}{{ env.site.title }}">
+    <meta property="og:url" content="{{ env.baseURL }}{{ page.url }}">
+    <meta property="og:description" content="{{ description or env.site.description }}">
+    <meta property="twitter:creator" content="@dajocarter">
+    <meta property="twitter:title" content="{{ title if title }}{{ " | " if title}}{{ env.site.title }}">
+    <meta property="twitter:description" content="{{ description or env.site.description }}">
   </head>
   <body data-theme="dark" class="bg-theme text-theme border-theme">
     {% include "header.njk" %}
