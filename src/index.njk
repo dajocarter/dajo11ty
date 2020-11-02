@@ -1,15 +1,22 @@
 ---
 layout: default
+pagination:
+  data: collections.blog
+  size: 5
+  reverse: true
+  alias: posts
 ---
 <article class="mx-auto prose md:prose-lg lg:prose-xl xl:prose-2xl">
-  <h1>My Blog Posts</h1>
-  {% if collections.blog %}
+  {% if posts %}
+  <h1>Latest Blog Posts</h1>
   <ul>
-    {% for post in collections.blog | reverse %}
+    {% for post in posts %}
     <li>
       <a href="{{ post.url }}"> {{ post.data.title }} </a>
     </li>
     {% endfor %}
   </ul>
+  <p>Go to my <a href='/blog'>Blog</a> to see all of my posts.</p>
   {% endif %}
+
 </article>

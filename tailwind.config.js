@@ -17,7 +17,8 @@ module.exports = {
       },
       textColor: {
         theme: 'var(--theme--color__text)',
-        link: 'var(--theme--color__link)'
+        link: 'var(--theme--color__link)',
+        bg: 'var(--theme--color__background)'
       },
       backgroundColor: {
         theme: 'var(--theme--color__background)',
